@@ -1,0 +1,11 @@
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\bin\Debug\net6.0\Payment_API.Domain.deps.json
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\bin\Debug\net6.0\Payment_API.Domain.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\bin\Debug\net6.0\Payment_API.Domain.pdb
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\obj\Debug\net6.0\Payment_API.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\obj\Debug\net6.0\Payment_API.Domain.AssemblyInfoInputs.cache
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\obj\Debug\net6.0\Payment_API.Domain.AssemblyInfo.cs
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\obj\Debug\net6.0\Payment_API.Domain.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\obj\Debug\net6.0\Payment_API.Domain.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\obj\Debug\net6.0\refint\Payment_API.Domain.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\obj\Debug\net6.0\Payment_API.Domain.pdb
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Domain\obj\Debug\net6.0\ref\Payment_API.Domain.dll

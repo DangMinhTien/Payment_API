@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Payment_API.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Payment_API.Api.Controllers.MerchantsController">
+            <summary>
+             Api for CRUD Merchant
+            </summary>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.MerchantsController.Get(System.String)">
+            <summary>
+            Get merchant base on creteria
+            </summary>
+            <param name="creteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.MerchantsController.GetPaging(Payment_API.Application.Base.Models.BasePagingQuery)">
+            <summary>
+             Get Merchants paging
+            </summary>
+            <param name="pagingQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.MerchantsController.GetOne(System.String)">
+            <summary>
+            Get one merchant by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.MerchantsController.Create(Payment_API.Application.Features.Commands.CreateMerchant)">
+            <summary>
+            Create merchant
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            
+                POST
+                {
+                    "MerchantName" : "Website bán hàng",
+                    "MerchantWebLink" : "https://webbanhang.com",
+                    "MerchantIpnUrl" : "https://webbanhang/ipn.com",
+                    "MerchantReturnUrl" : "https://webbanhang.com/payment/return"
+                }
+            
+            </remarks>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.MerchantsController.Update(Payment_API.Application.Features.Commands.UpdateMerchant,System.String)">
+            <summary>
+            Update Merchan by id
+            </summary>
+            <param name="request"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.MerchantsController.SetActive(Payment_API.Application.Features.Commands.SetActiceMerchant,System.String)">
+            <summary>
+            Set Active Merchant by id
+            </summary>
+            <param name="request"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.MerchantsController.Delete(System.String)">
+            <summary>
+            Delete merchant by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Payment_API.Api.Controllers.PaymentsController">
+            <summary>
+            Payment api endpoint
+            </summary>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.PaymentsController.#ctor(MediatR.IMediator)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.PaymentsController.Create(Payment_API.Application.Features.Commands.CreatePayment)">
+            <summary>
+            Create payment to get link
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

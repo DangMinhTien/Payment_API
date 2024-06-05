@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Payment_API.Service/1.0.0": {
+        "dependencies": {
+          "Payment_API.Ultils": "1.0.0"
+        },
+        "runtime": {
+          "Payment_API.Service.dll": {}
+        }
+      },
+      "Payment_API.Ultils/1.0.0": {
+        "runtime": {
+          "Payment_API.Ultils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Payment_API.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Payment_API.Ultils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

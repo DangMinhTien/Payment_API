@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>\bin\Payment_API.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="6.5.1" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Payment_API.Application\Payment_API.Application.csproj" />
+    <ProjectReference Include="..\Payment_API.Domain\Payment_API.Domain.csproj" />
+    <ProjectReference Include="..\Payment_API.Persistence\Payment_API.Persistence.csproj" />
+    <ProjectReference Include="..\Payment_API.Service\Payment_API.Service.csproj" />
+    <ProjectReference Include="..\Payment_API.Ultils\Payment_API.Ultils.csproj" />
+  </ItemGroup>
+
+</Project>

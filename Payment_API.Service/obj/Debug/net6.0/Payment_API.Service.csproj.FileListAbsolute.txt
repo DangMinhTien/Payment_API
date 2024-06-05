@@ -1,0 +1,15 @@
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\bin\Debug\net6.0\Payment_API.Service.deps.json
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\bin\Debug\net6.0\Payment_API.Service.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\bin\Debug\net6.0\Payment_API.Service.pdb
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\bin\Debug\net6.0\Payment_API.Ultils.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\bin\Debug\net6.0\Payment_API.Ultils.pdb
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\Payment_API.Service.csproj.AssemblyReference.cache
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\Payment_API.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\Payment_API.Service.AssemblyInfoInputs.cache
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\Payment_API.Service.AssemblyInfo.cs
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\Payment_API.Service.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\Payment_API.Service.csproj.CopyComplete
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\Payment_API.Service.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\refint\Payment_API.Service.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\Payment_API.Service.pdb
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Service\obj\Debug\net6.0\ref\Payment_API.Service.dll

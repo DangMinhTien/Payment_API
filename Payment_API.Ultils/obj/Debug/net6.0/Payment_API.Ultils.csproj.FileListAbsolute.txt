@@ -1,0 +1,11 @@
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\bin\Debug\net6.0\Payment_API.Ultils.deps.json
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\bin\Debug\net6.0\Payment_API.Ultils.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\bin\Debug\net6.0\Payment_API.Ultils.pdb
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\Payment_API.Ultils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\Payment_API.Ultils.AssemblyInfoInputs.cache
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\Payment_API.Ultils.AssemblyInfo.cs
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\Payment_API.Ultils.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\Payment_API.Ultils.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\refint\Payment_API.Ultils.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\Payment_API.Ultils.pdb
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\ref\Payment_API.Ultils.dll
