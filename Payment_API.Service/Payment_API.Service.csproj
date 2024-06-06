@@ -10,4 +10,12 @@
     <ProjectReference Include="..\Payment_API.Ultils\Payment_API.Ultils.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Momo\Lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
 </Project>

@@ -861,6 +861,7 @@
       },
       "Payment_API.Service/1.0.0": {
         "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
           "Payment_API.Ultils": "1.0.0"
         },
         "runtime": {

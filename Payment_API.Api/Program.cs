@@ -2,6 +2,7 @@ using Payment_API.Api.Services;
 using Payment_API.Application.Features.Commands;
 using Payment_API.Application.Interface;
 using Payment_API.Persistence.Persist;
+using Payment_API.Service.Momo.Config;
 using Payment_API.Service.VnPay.Config;
 using System.Reflection;
 
@@ -38,8 +39,12 @@ builder.Services.AddMediatR(r =>
 {
     r.RegisterServicesFromAssemblies(typeof(CreateMerchant).Assembly);
 });
+// config vnpay
 builder.Services.Configure<VnPayConfig>(
                 builder.Configuration.GetSection(VnPayConfig.ConfigName));
+// config momo
+builder.Services.Configure<MomoConfig>(
+                builder.Configuration.GetSection(MomoConfig.ConfigName));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
