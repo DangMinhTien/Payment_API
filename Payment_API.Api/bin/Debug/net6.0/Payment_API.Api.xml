@@ -76,11 +76,12 @@
             Payment api endpoint
             </summary>
         </member>
-        <member name="M:Payment_API.Api.Controllers.PaymentsController.#ctor(MediatR.IMediator)">
+        <member name="M:Payment_API.Api.Controllers.PaymentsController.#ctor(MediatR.IMediator,Microsoft.Extensions.Options.IOptions{Payment_API.Service.VnPay.Config.VnPayConfig})">
             <summary>
             Constructor
             </summary>
             <param name="mediator"></param>
+            <param name="vnPayConfig"></param>
         </member>
         <member name="M:Payment_API.Api.Controllers.PaymentsController.Create(Payment_API.Application.Features.Commands.CreatePayment)">
             <summary>

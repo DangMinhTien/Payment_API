@@ -17,3 +17,4 @@ C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.
 C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Application\bin\Debug\net6.0\Payment_API.Ultils.dll
 C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Application\bin\Debug\net6.0\Payment_API.Service.pdb
 C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Application\bin\Debug\net6.0\Payment_API.Ultils.pdb
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Application\obj\Debug\net6.0\Payment_API.Application.sourcelink.json

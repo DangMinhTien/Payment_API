@@ -9,7 +9,13 @@ namespace Payment_API.Application.Features.Dtos
     public class PaymentReturnDtos
     {
         public string? PaymentId { get; set; }
+        /// <summary>
+        /// 00: success
+        /// 99: unknown
+        /// 10: error
+        /// </summary>
         public string? PaymentStatus { get; set; }
+        public string? PaymentMessage { get; set; }
         /// <summary>
         /// Format: yyyyMMddHHmmss
         /// </summary>

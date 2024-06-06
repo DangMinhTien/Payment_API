@@ -9,3 +9,4 @@ C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.
 C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\refint\Payment_API.Ultils.dll
 C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\Payment_API.Ultils.pdb
 C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\ref\Payment_API.Ultils.dll
+C:\Users\LENOVO\OneDrive\Documents\Wordspace\AspNet\API\Payment_API\Payment_API.Ultils\obj\Debug\net6.0\Payment_API.Ultils.sourcelink.json
