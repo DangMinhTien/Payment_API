@@ -1,9 +1,11 @@
+﻿using Hangfire;
 using Payment_API.Api.Services;
 using Payment_API.Application.Features.Commands;
 using Payment_API.Application.Interface;
 using Payment_API.Persistence.Persist;
 using Payment_API.Service.Momo.Config;
 using Payment_API.Service.VnPay.Config;
+using Payment_API.Service.ZaloPay.Config;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,6 +47,22 @@ builder.Services.Configure<VnPayConfig>(
 // config momo
 builder.Services.Configure<MomoConfig>(
                 builder.Configuration.GetSection(MomoConfig.ConfigName));
+// config zalopay
+builder.Services.Configure<ZaloPayConfig>(
+                builder.Configuration.GetSection(ZaloPayConfig.ConfigName));
+// cấu hình hangfire
+builder.Services.AddHangfire(configuration =>
+{
+    configuration.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+    .UseSimpleAssemblyNameTypeSerializer()
+    .UseRecommendedSerializerSettings()
+    .UseSqlServerStorage(builder.Configuration.GetConnectionString("Payment_API"),
+        new Hangfire.SqlServer.SqlServerStorageOptions()
+        {
+            // TO DO : change hangfire sql server options
+        });
+});
+builder.Services.AddHangfireServer();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -55,7 +73,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseHangfireDashboard();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Options;
 using Payment_API.Application.Base.Models;
 using Payment_API.Application.Features.Commands;
 using Payment_API.Application.Features.Dtos;
+using Payment_API.Application.Features.Payment.Commands;
 using Payment_API.Service.VnPay.Config;
 using Payment_API.Service.VnPay.Response;
 using Payment_API.Ultils.Extensions;
@@ -48,6 +49,11 @@ namespace Payment_API.Api.Controllers
             response = await _mediator.Send(request);
             return Ok(response);
         }
+        /// <summary>
+        /// Process return payment vnpay
+        /// </summary>
+        /// <param name="response"></param>
+        /// <returns></returns>
         [HttpGet("vnpay-return")]
         public async Task<IActionResult> VnPayReturn([FromQuery]VnPayPayResponse response)
         {
@@ -60,6 +66,26 @@ namespace Payment_API.Api.Controllers
                 returnUrl = processResult.Data.Item2 as string;
             }
             if(returnUrl.EndsWith("/"))
+                returnUrl = returnUrl.Remove(returnUrl.Length - 1, 1);
+            return Redirect($"{returnUrl}?{returnModel.ToQueryString()}");
+        }
+        /// <summary>
+        /// Process return payment momo
+        /// </summary>
+        /// <param name="response"></param>
+        /// <returns></returns>
+        [HttpGet("momo-return")]
+        public async Task<IActionResult> MomoReturn([FromQuery] ProcessMomoPaymentReturn response)
+        {
+            string returnUrl = string.Empty;
+            var returnModel = new PaymentReturnDtos();
+            var processResult = await _mediator.Send(response.Adapt<ProcessMomoPaymentReturn>());
+            if (processResult.Success)
+            {
+                returnModel = processResult.Data.Item1 as PaymentReturnDtos;
+                returnUrl = processResult.Data.Item2 as string;
+            }
+            if (returnUrl.EndsWith("/"))
                 returnUrl = returnUrl.Remove(returnUrl.Length - 1, 1);
             return Redirect($"{returnUrl}?{returnModel.ToQueryString()}");
         }

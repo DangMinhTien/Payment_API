@@ -90,5 +90,19 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="M:Payment_API.Api.Controllers.PaymentsController.VnPayReturn(Payment_API.Service.VnPay.Response.VnPayPayResponse)">
+            <summary>
+            Process return payment vnpay
+            </summary>
+            <param name="response"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Payment_API.Api.Controllers.PaymentsController.MomoReturn(Payment_API.Application.Features.Payment.Commands.ProcessMomoPaymentReturn)">
+            <summary>
+            Process return payment momo
+            </summary>
+            <param name="response"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

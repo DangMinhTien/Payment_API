@@ -16,6 +16,9 @@ using Microsoft.Extensions.Options;
 using Payment_API.Service.VnPay.Config;
 using Payment_API.Service.Momo.Config;
 using Payment_API.Service.Momo.Request;
+using Payment_API.Service.ZaloPay.Config;
+using Payment_API.Service.ZaloPay.Request;
+using Payment_API.Ultils.Extensions;
 
 namespace Payment_API.Application.Features.Commands
 {
@@ -40,18 +43,21 @@ namespace Payment_API.Application.Features.Commands
         private readonly ISqlService _sqlService;
         private readonly VnPayConfig _vnpayConfig;
         private readonly MomoConfig _momoConfig;
+        private readonly ZaloPayConfig _zaloPayConfig;
 
         public CreatePaymentHandler(ICurrentUserService currentUserService,
             IConnectionService connectionService,
             ISqlService sqlService,
             IOptions<VnPayConfig> vnpayConfig,
-            IOptions<MomoConfig> momoConfig)
+            IOptions<MomoConfig> momoConfig,
+            IOptions<ZaloPayConfig> zaloPayConfig)
         {
             _currentUserService = currentUserService;
             _connectionService = connectionService;
             _sqlService = sqlService;
             _vnpayConfig = vnpayConfig.Value;
             _momoConfig = momoConfig.Value;
+            _zaloPayConfig = zaloPayConfig.Value;
         }
         public Task<BaseResultWithData<PaymentLinkDtos>> Handle(CreatePayment request, CancellationToken cancellationToken)
         {
@@ -102,6 +108,21 @@ namespace Payment_API.Application.Features.Commands
                             else
                             {
                                 result.Message = createMessage;
+                            }
+                            break;
+                        case "ZALOPAY":
+                            var zalopayPayRequest = new CreateZaloPayPayRequest(_zaloPayConfig.AppId, _zaloPayConfig.AppUser,
+                                DateTime.Now.GetTimeStamp(), (long)request.RequiredAmount!, DateTime.Now.ToString("yymmdd") + "_" + outputIdParam!.Value?.ToString() ?? string.Empty,
+                                "zalopayapp", request.PaymentContent ?? string.Empty);
+                            zalopayPayRequest.MakeSignature(_zaloPayConfig.Key1);
+                            (bool createZaloPayLinkResult, string? createZaloPayMessage) = zalopayPayRequest.GetLink(_zaloPayConfig.PaymentUrl);
+                            if (createZaloPayLinkResult)
+                            {
+                                paymentUrl = createZaloPayMessage;
+                            }
+                            else
+                            {
+                                result.Message = createZaloPayMessage;
                             }
                             break;
                         default:
