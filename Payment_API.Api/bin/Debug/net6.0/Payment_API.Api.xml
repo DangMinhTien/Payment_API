@@ -13,7 +13,7 @@
             <summary>
             Get merchant base on creteria
             </summary>
-            <param name="creteria"></param>
+            <param name="criteria"></param>
             <returns></returns>
         </member>
         <member name="M:Payment_API.Api.Controllers.MerchantsController.GetPaging(Payment_API.Application.Base.Models.BasePagingQuery)">

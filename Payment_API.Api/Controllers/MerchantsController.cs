@@ -5,6 +5,10 @@ using Payment_API.Application.Features.Dtos;
 using Payment_API.Application.Features.Commands;
 using System.Net;
 using MediatR;
+using Payment_API.Application.Features.Merchant.Commands;
+using Payment_API.Application.Interface;
+using Payment_API.Api.Services;
+using Payment_API.Persistence.Persist;
 
 namespace Payment_API.Api.Controllers
 {
@@ -17,23 +21,37 @@ namespace Payment_API.Api.Controllers
     public class MerchantsController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IConnectionService _connectionService;
+        private readonly ISqlService _sqlService;
 
-        public MerchantsController(IMediator mediator)
+        public MerchantsController(IMediator mediator, 
+            IConnectionService connectionService, 
+            ISqlService sqlService)
         {
             _mediator = mediator;
+            _connectionService = connectionService;
+            _sqlService = sqlService;
         }
         /// <summary>
         /// Get merchant base on creteria
         /// </summary>
-        /// <param name="creteria"></param>
+        /// <param name="criteria"></param>
         /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(typeof(BaseResultWithData<List<MerchantDtos>>), 200)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public IActionResult Get(string creteria)
+        public async Task<IActionResult> Get(string? criteria = "")
         {
-            var response = new BaseResultWithData<List<MerchantDtos>>();
-            return Ok(response);
+            try
+            {
+                var getMerchant = new GetMerchant();
+                var response = getMerchant.Handle(criteria ?? "", _connectionService, _sqlService);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
         /// <summary>
         ///  Get Merchants paging
