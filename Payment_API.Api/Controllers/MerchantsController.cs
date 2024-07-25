@@ -5,10 +5,10 @@ using Payment_API.Application.Features.Dtos;
 using Payment_API.Application.Features.Commands;
 using System.Net;
 using MediatR;
-using Payment_API.Application.Features.Merchant.Commands;
 using Payment_API.Application.Interface;
 using Payment_API.Api.Services;
 using Payment_API.Persistence.Persist;
+using Payment_API.Application.Features.Queries;
 
 namespace Payment_API.Api.Controllers
 {
@@ -44,8 +44,8 @@ namespace Payment_API.Api.Controllers
         {
             try
             {
-                var getMerchant = new GetMerchant();
-                var response = getMerchant.Handle(criteria ?? "", _connectionService, _sqlService);
+                var getMerchants = new GetMerchants();
+                var response = getMerchants.Handle(criteria ?? "", _connectionService, _sqlService);
                 return Ok(response);
             }
             catch (Exception ex)

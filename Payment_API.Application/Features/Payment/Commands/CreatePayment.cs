@@ -25,7 +25,7 @@ namespace Payment_API.Application.Features.Commands
     public class CreatePayment : IRequest<BaseResultWithData<PaymentLinkDtos>>
     {
         public string? PaymentContent { get; set; } = string.Empty;
-        public string? PaymentCurrency { get; set; } = string.Empty;
+        public string? PaymentCurrency { get; set; } = "vnd";
         public string? PaymentRefId { get; set; } = string.Empty;
         public decimal? RequiredAmount { get; set; }
         public DateTime? PaymentDate { get; set; } = DateTime.Now;
@@ -90,7 +90,7 @@ namespace Payment_API.Application.Features.Commands
                     {
                         case "VNPAY":
                             var vnpayPayRequest = new VnPayPayRequest(_vnpayConfig.Version,
-                                _vnpayConfig.TmnCode, DateTime.Now, _currentUserService.IpAddress ?? string.Empty, request.RequiredAmount ?? 0, request.PaymentCurrency ?? string.Empty,
+                                _vnpayConfig.TmnCode, DateTime.Now, _currentUserService.IpAddress ?? string.Empty, request.RequiredAmount ?? 0, string.IsNullOrEmpty(request.PaymentCurrency) ? "vnd" : request.PaymentCurrency,
                                 "other", request.PaymentContent ?? string.Empty, _vnpayConfig.ReturnUrl, outputIdParam!.Value?.ToString() ?? string.Empty);
                             paymentUrl = vnpayPayRequest.GetLink(_vnpayConfig.PaymentUrl, _vnpayConfig.HashSecret);
                             break;
